@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "uni-collapse": "/components/uni-collapse/uni-collapse",
+    "uni-collapse-item": "/components/uni-collapse-item/uni-collapse-item",
+    "m-search": "/components/mehaotian-search-revision/mehaotian-search-revision"
+  }
+}

@@ -1,0 +1,61 @@
+{
+	"pages": [
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/tabbar/home/home",
+			"style": {}
+		},
+		{
+			"path": "pages/tabbar/playlist/playlist",
+			"style": {}
+		},
+		{
+			"path": "pages/tabbar/search/search",
+			"style": {}
+		},
+		{
+			"path": "pages/ranking/ranking",
+			"style": {}
+		},
+		{
+			"path": "pages/playlistDetail/playlist-detail",
+			"style": {}
+		},
+		{
+			"path": "pages/songDetail/song-detail",
+			"style": {}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "FFFFFF",
+		"navigationBarTitleText": "Coisin4Music",
+		"navigationBarBackgroundColor": "#252525",
+		"backgroundColor": "#252525"
+	},
+	"tabBar": {
+		"borderStyle": "black",
+		"backgroundColor": "#252525",
+		"color": "#ccc",
+		"selectedColor": "#c20c0c",
+		"list": [{
+				"pagePath": "pages/tabbar/home/home",
+				"iconPath": "static/img/tabbar/home.png",
+				"selectedIconPath": "static/img/tabbar/homeactive.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/tabbar/playlist/playlist",
+				"iconPath": "static/img/tabbar/guanzhu.png",
+				"selectedIconPath": "static/img/tabbar/guanzhuactive.png",
+				"text": "歌单"
+			},
+			{
+				"pagePath": "pages/tabbar/search/search",
+				"iconPath": "static/img/tabbar/search.png",
+				"selectedIconPath": "static/img/tabbar/search_active.png",
+				"text": "搜索"
+			}
+		]
+	},
+	"requiredBackgroundModes": ["audio"]
+}
