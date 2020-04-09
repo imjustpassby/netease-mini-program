@@ -255,8 +255,7 @@
 				let curRoute = routes[routes.length - 1].route;
 				uni.navigateTo({
 					url: '/pages/songDetail/song-detail',
-					success: r => {
-					},
+					success: r => {},
 					fail: () => {},
 					complete: () => {}
 				});
@@ -516,6 +515,7 @@
 			text-align: center;
 			color: $uni-text-color-grey;
 			margin-bottom: 20rpx;
+			font-size: 12px;
 		}
 
 		.playlist {

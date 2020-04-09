@@ -249,6 +249,7 @@ view.data-v-3bf50d44 {
     text-align: center;
     color: #999;
     margin-bottom: 20rpx;
+    font-size: 12px;
 }
 .search-result .playlist.data-v-3bf50d44 {
     display: -webkit-box;

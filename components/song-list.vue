@@ -43,17 +43,14 @@
 			async playSong(song) {
 				let routes = getCurrentPages(); // 获取当前打开过的页面路由数组
 				let curRoute = routes[routes.length - 1].route;
+				await this.getUrl(song);
 				if (curRoute != "pages/songDetail/song-detail") {
 					uni.navigateTo({
 						url: '/pages/songDetail/song-detail',
-						success: r => {
-							this.getUrl(song);
-						},
+						success: r => {},
 						fail: () => {},
 						complete: () => {}
 					});
-				} else {
-					this.getUrl(song);
 				}
 			},
 			async getUrl(song) {

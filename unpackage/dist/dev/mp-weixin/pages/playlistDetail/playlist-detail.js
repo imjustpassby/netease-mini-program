@@ -234,23 +234,20 @@ var _vuex = __webpack_require__(/*! vuex */ 16);function _interopRequireDefault(
                 this.playList.name = res.playlist.name;
                 this.playList.description = res.playlist.description;case 12:case "end":return _context2.stop();}}}, _callee2, this);}));function getListDetail(_x2) {return _getListDetail.apply(this, arguments);}return getListDetail;}(),
 
-    playSong: function () {var _playSong = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3(song) {var _this = this;var routes, curRoute;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:
+    playSong: function () {var _playSong = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3(song) {var routes, curRoute;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:
                 routes = getCurrentPages(); // 获取当前打开过的页面路由数组
-                curRoute = routes[routes.length - 1].route;
+                curRoute = routes[routes.length - 1].route;_context3.next = 4;return (
+                  this.getUrl(song));case 4:
                 if (curRoute != "pages/songDetail/song-detail") {
                   uni.navigateTo({
                     url: '/pages/songDetail/song-detail',
-                    success: function success(r) {
-                      _this.getUrl(song);
-                    },
+                    success: function success(r) {},
                     fail: function fail() {},
                     complete: function complete() {} });
 
-                } else {
-                  this.getUrl(song);
-                }case 3:case "end":return _context3.stop();}}}, _callee3, this);}));function playSong(_x3) {return _playSong.apply(this, arguments);}return playSong;}(),
+                }case 5:case "end":return _context3.stop();}}}, _callee3, this);}));function playSong(_x3) {return _playSong.apply(this, arguments);}return playSong;}(),
 
-    getUrl: function () {var _getUrl = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee4(song) {var _this2 = this;return _regenerator.default.wrap(function _callee4$(_context4) {while (1) {switch (_context4.prev = _context4.next) {case 0:
+    getUrl: function () {var _getUrl = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee4(song) {var _this = this;return _regenerator.default.wrap(function _callee4$(_context4) {while (1) {switch (_context4.prev = _context4.next) {case 0:
                 this.setPlayingSong(song);
                 (0, _song.getSongUrl)(song.id).then(function (res) {
                   var songList = res.data.map(function (item) {
@@ -268,10 +265,10 @@ var _vuex = __webpack_require__(/*! vuex */ 16);function _interopRequireDefault(
 
                     return;
                   }
-                  _this2.$bgAudioMannager.title = song.name;
-                  _this2.$bgAudioMannager.singer = song.artist;
-                  _this2.$bgAudioMannager.coverImgUrl = song.cover;
-                  _this2.$bgAudioMannager.src = url;
+                  _this.$bgAudioMannager.title = song.name;
+                  _this.$bgAudioMannager.singer = song.artist;
+                  _this.$bgAudioMannager.coverImgUrl = song.cover;
+                  _this.$bgAudioMannager.src = url;
                 }).catch(function (e) {
                   console.log(e);
                 });case 2:case "end":return _context4.stop();}}}, _callee4, this);}));function getUrl(_x4) {return _getUrl.apply(this, arguments);}return getUrl;}() }) };exports.default = _default;

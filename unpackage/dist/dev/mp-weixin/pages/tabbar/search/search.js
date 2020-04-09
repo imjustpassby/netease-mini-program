@@ -395,8 +395,7 @@ var _vuex = __webpack_require__(/*! vuex */ 16);function _interopRequireDefault(
                 curRoute = routes[routes.length - 1].route;
                 uni.navigateTo({
                   url: '/pages/songDetail/song-detail',
-                  success: function success(r) {
-                  },
+                  success: function success(r) {},
                   fail: function fail() {},
                   complete: function complete() {} });case 5:case "end":return _context3.stop();}}}, _callee3, this);}));function playSong(_x2) {return _playSong.apply(this, arguments);}return playSong;}(),
 

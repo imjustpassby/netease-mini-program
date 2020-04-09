@@ -9,8 +9,19 @@
 				<view class="lyric" scroll-y="true">
 					<text>{{lyric}}</text>
 				</view>
-				<view>
-					<song-list title="猜你喜欢" :songList="similarSong"></song-list>
+				<view class="simi">
+					<span class="title">猜你喜欢</span>
+					<uni-list class="list">
+						<uni-list-item v-for="item in similarSong" :key="item.id" class="list-item" @tap="playSong(item)">
+							<view class="song-album">
+								<image :src="item.cover+'?param=50y50'" mode="aspectFill" lazy-load="true"></image>
+							</view>
+							<view class="song-detail">
+								<h2>{{item.name}}</h2>
+								<p>{{item.albumName}} - {{item.artist}}</p>
+							</view>
+						</uni-list-item>
+					</uni-list>
 				</view>
 			</view>
 		</view>
@@ -21,11 +32,13 @@
 	import {
 		getLyric,
 		getSimilarSong,
-		getSongDetail
+		getSongDetail,
+		getSongUrl
 	} from "@/api/song.js"
 	import songList from "@/components/song-list.vue"
 	import {
-		mapState
+		mapState,
+		mapMutations
 	} from "vuex"
 	export default {
 		components: {
@@ -42,10 +55,13 @@
 			await this.init(this.playingSong);
 		},
 		methods: {
+			...mapMutations(['setPlayingSong']),
 			async getLyric(id) {
 				let res = await getLyric(id);
 				if (res.hasOwnProperty('lrc')) {
 					this.lyric = res.lrc.lyric.replace(/[\[d{2}:d{2}\.\d{3}\]]/g, "");
+				} else {
+					this.lyric = "暂无歌词";
 				}
 			},
 			async getSimilarSong(id) {
@@ -85,8 +101,38 @@
 				uni.setNavigationBarTitle({
 					title: this.playingSong.name
 				})
-				await this.getLyric(song.id);
-				await this.getSimilarSong(song.id);
+				await this.getLyric(this.playingSong.id);
+				await this.getSimilarSong(this.playingSong.id);
+			},
+			async playSong(song) {
+				await this.getUrl(song);
+				await this.init(song);
+			},
+			async getUrl(song) {
+				this.setPlayingSong(song);
+				getSongUrl(song.id).then(res => {
+					let songList = res.data.map(item => {
+						return {
+							url: item.url,
+							id: item.id
+						};
+					});
+					let url = songList[0].url;
+					if (!url) {
+						uni.showToast({
+							title: '暂无版权',
+							icon: 'none',
+							mask: true,
+						});
+						return;
+					}
+					this.$bgAudioMannager.title = song.name;
+					this.$bgAudioMannager.singer = song.artist;
+					this.$bgAudioMannager.coverImgUrl = song.cover;
+					this.$bgAudioMannager.src = url;
+				}).catch(e => {
+					console.log(e);
+				});
 			}
 		}
 	}
@@ -133,6 +179,59 @@
 			overflow: scroll;
 			text-align: center;
 			color: $uni-text-color-grey;
+		}
+	}
+	.simi {
+		width: 95vw;
+		min-height: 366px;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		margin-top: 20px;
+		padding: 20rpx;
+		overflow: hidden;
+	
+		.title {
+			font-weight: bold;
+		}
+	
+		.list {
+			display: flex;
+			flex-direction: column;
+	
+			&-item {
+				margin-top: 20rpx;
+				display: flex;
+				flex-direction: row;
+	
+				.song-album {
+					display: flex;
+					align-items: flex-start;
+					justify-content: center;
+	
+					image {
+						width: 100rpx;
+						height: 100rpx;
+						border-radius: 10rpx;
+					}
+				}
+	
+				.song-detail {
+					padding: 10rpx 0 20rpx 20rpx;
+					line-height: 1.3em;
+					text-overflow: ellipsis;
+	
+					h2 {
+						font-size: 14px;
+					}
+	
+					p {
+						font-size: 12px;
+						font-weight: 200;
+						color: $uni-text-color-grey;
+					}
+				}
+			}
 		}
 	}
 </style>

@@ -151,13 +151,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 var _song = __webpack_require__(/*! @/api/song.js */ 46);
 
 
 
 
 
-var _vuex = __webpack_require__(/*! vuex */ 16);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var songList = function songList() {Promise.all(/*! require.ensure | components/song-list */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/song-list")]).then((function () {return resolve(__webpack_require__(/*! @/components/song-list.vue */ 80));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+var _vuex = __webpack_require__(/*! vuex */ 16);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var songList = function songList() {Promise.all(/*! require.ensure | components/song-list */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/song-list")]).then((function () {return resolve(__webpack_require__(/*! @/components/song-list.vue */ 80));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
 
 
 {
@@ -174,11 +187,14 @@ var _vuex = __webpack_require__(/*! vuex */ 16);function _interopRequireDefault(
   onLoad: function () {var _onLoad = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
                 this.init(this.playingSong));case 2:case "end":return _context.stop();}}}, _callee, this);}));function onLoad() {return _onLoad.apply(this, arguments);}return onLoad;}(),
 
-  methods: {
+  methods: _objectSpread({},
+  (0, _vuex.mapMutations)(['setPlayingSong']), {
     getLyric: function () {var _getLyric2 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2(id) {var res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
                   (0, _song.getLyric)(id));case 2:res = _context2.sent;
                 if (res.hasOwnProperty('lrc')) {
                   this.lyric = res.lrc.lyric.replace(/[\[d{2}:d{2}\.\d{3}\]]/g, "");
+                } else {
+                  this.lyric = "暂无歌词";
                 }case 4:case "end":return _context2.stop();}}}, _callee2, this);}));function getLyric(_x) {return _getLyric2.apply(this, arguments);}return getLyric;}(),
 
     getSimilarSong: function () {var _getSimilarSong2 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3(id) {var res, ids, covers;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:_context3.next = 2;return (
@@ -218,8 +234,38 @@ var _vuex = __webpack_require__(/*! vuex */ 16);function _interopRequireDefault(
                 uni.setNavigationBarTitle({
                   title: this.playingSong.name });_context5.next = 3;return (
 
-                  this.getLyric(song.id));case 3:_context5.next = 5;return (
-                  this.getSimilarSong(song.id));case 5:case "end":return _context5.stop();}}}, _callee5, this);}));function init(_x4) {return _init.apply(this, arguments);}return init;}() } };exports.default = _default;
+                  this.getLyric(this.playingSong.id));case 3:_context5.next = 5;return (
+                  this.getSimilarSong(this.playingSong.id));case 5:case "end":return _context5.stop();}}}, _callee5, this);}));function init(_x4) {return _init.apply(this, arguments);}return init;}(),
+
+    playSong: function () {var _playSong = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee6(song) {return _regenerator.default.wrap(function _callee6$(_context6) {while (1) {switch (_context6.prev = _context6.next) {case 0:_context6.next = 2;return (
+                  this.getUrl(song));case 2:_context6.next = 4;return (
+                  this.init(song));case 4:case "end":return _context6.stop();}}}, _callee6, this);}));function playSong(_x5) {return _playSong.apply(this, arguments);}return playSong;}(),
+
+    getUrl: function () {var _getUrl = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee7(song) {var _this = this;return _regenerator.default.wrap(function _callee7$(_context7) {while (1) {switch (_context7.prev = _context7.next) {case 0:
+                this.setPlayingSong(song);
+                (0, _song.getSongUrl)(song.id).then(function (res) {
+                  var songList = res.data.map(function (item) {
+                    return {
+                      url: item.url,
+                      id: item.id };
+
+                  });
+                  var url = songList[0].url;
+                  if (!url) {
+                    uni.showToast({
+                      title: '暂无版权',
+                      icon: 'none',
+                      mask: true });
+
+                    return;
+                  }
+                  _this.$bgAudioMannager.title = song.name;
+                  _this.$bgAudioMannager.singer = song.artist;
+                  _this.$bgAudioMannager.coverImgUrl = song.cover;
+                  _this.$bgAudioMannager.src = url;
+                }).catch(function (e) {
+                  console.log(e);
+                });case 2:case "end":return _context7.stop();}}}, _callee7, this);}));function getUrl(_x6) {return _getUrl.apply(this, arguments);}return getUrl;}() }) };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
