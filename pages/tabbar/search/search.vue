@@ -569,7 +569,7 @@
 					line-height: 1.3em;
 					text-overflow: ellipsis;
 
-					s h2 {
+					h2 {
 						font-size: 14px;
 					}
 

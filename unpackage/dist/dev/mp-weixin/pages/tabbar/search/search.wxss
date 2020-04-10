@@ -291,7 +291,7 @@ view.data-v-3bf50d44 {
         line-height: 1.3em;
         text-overflow: ellipsis;
 }
-.search-result .playlist-item .playlist-detail ._s ._h2.data-v-3bf50d44 {
+.search-result .playlist-item .playlist-detail ._h2.data-v-3bf50d44 {
           font-size: 14px;
 }
 .search-result .playlist-item .playlist-detail ._p.data-v-3bf50d44 {

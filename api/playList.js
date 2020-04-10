@@ -15,7 +15,7 @@ export function getPlayList(data) {
     params: {
       limit: 20,
       cat: data.cat ? data.cat : '',
-      offset: data.offset ? data.offset : 0
+      offset: data.offset ? 20 * data.offset : 0
     }
   })
 }
