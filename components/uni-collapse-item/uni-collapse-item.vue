@@ -112,7 +112,7 @@
 
 	.uni-collapse-cell {
 		flex-direction: column;
-		border-color: $uni-border-color;
+		border-color: $uni-bg-color-hover;
 		border-bottom-width: 1px;
 		border-bottom-style: solid;
 	}

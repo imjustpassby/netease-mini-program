@@ -1,8 +1,8 @@
 <template>
 	<view class="container">
 		<view class="search-box">
-			<mSearch class="mSearch-input-box" :mode="2" button="inside" :placeholder="defaultKeyword" @search="doSearch(false)"
-			 @input="inputChange" @confirm="doSearch(false)" v-model="keyword"></mSearch>
+			<mSearch class="mSearch-input-box" :mode="2" button="inside" :placeholder="defaultKeyword" @search="doSearch(keyword)"
+			 @input="inputChange" @confirm="doSearch(keyword)" v-model="keyword"></mSearch>
 		</view>
 		<view class="search-keyword" v-if="searchResult.code!==200">
 			<scroll-view class="keyword-list-box" v-show="isShowKeywordList" scroll-y>
@@ -26,7 +26,7 @@
 						</view>
 					</view>
 					<view class="keyword">
-						<view v-for="(keyword,index) in oldKeywordList" @tap="doSearch(keyword)" :key="index">{{keyword}}</view>
+						<view v-for="(keyword,index) in oldKeywordList" @tap="doSearch(keyword.toString())" :key="index">{{keyword}}</view>
 					</view>
 				</view>
 				<view class="keyword-block">
@@ -49,23 +49,23 @@
 			<uni-collapse>
 				<uni-collapse-item title="单曲" open="true">
 					<uni-list>
-						<uni-list-item v-for="(item,index) in searchResult.song.songs" :key="item.id" class="list-item" @tap="playSong(item)">
+						<uni-list-item v-for="(item,index) in searchResult.songs" :key="item.id" class="list-item" @tap="playSong(item)">
 							<view class="list-item-index">
 								{{index+1}}
 							</view>
 							<view class="list-item-detail">
 								<p>{{item.name}}</p>
-								<p style="color: #999;">{{item.ar[0].name}} - {{item.al.name}}</p>
+								<p style="color: #999;">{{item.artists[0].name}} - {{item.album.name}}</p>
 							</view>
 						</uni-list-item>
 						<uni-list-item>
-							<p class="load-more">点击加载更多</p>
+							<p class="load-more" @tap="loadMore(1)">点击加载更多</p>
 						</uni-list-item>
 					</uni-list>
 				</uni-collapse-item>
-				<uni-collapse-item title="歌单">
+				<uni-collapse-item title="歌单" open="true">
 					<uni-list class="playlist">
-						<uni-list-item v-for="item in searchResult.playList.playLists" :key="item.id" class="playlist-item" @tap="goPlaylistDetail(item.id)">
+						<uni-list-item v-for="item in searchResult.playlists" :key="item.id" class="playlist-item" @tap="goPlaylistDetail(item.id)">
 							<view class="playlist-cover">
 								<image :src="item.coverImgUrl+'?param=50y50'" mode="aspectFill" lazy-load="true"></image>
 							</view>
@@ -75,7 +75,7 @@
 							</view>
 						</uni-list-item>
 						<uni-list-item>
-							<p class="load-more">点击加载更多</p>
+							<p class="load-more" @tap="loadMore(1000)">点击加载更多</p>
 						</uni-list-item>
 					</uni-list>
 				</uni-collapse-item>
@@ -108,8 +108,12 @@
 				forbid: '',
 				isShowKeywordList: false,
 				searchResult: {
-					code: 0
-				}
+					code: 0,
+					songs: [],
+					playlists: []
+				},
+				songOffset: 0,
+				playlistOffset: 0
 			}
 		},
 		onLoad() {
@@ -206,17 +210,21 @@
 			},
 			//执行搜索
 			async doSearch(keyword) {
+				if (keyword === "") return;
 				this.keyword = keyword ? keyword : this.keyword;
-				this.saveKeyword(keyword); //保存为历史 
+				this.saveKeyword(this.keyword); //保存为历史 
 				uni.showToast({
-					title: "搜索 " + keyword + " ...",
+					title: "搜索 " + this.keyword + " ...",
 					icon: 'loading',
 					duration: 2000
 				});
-				let res = await search({
-					keywords: this.keyword
-				});
-				this.searchResult = res.result;
+				this.searchResult.songs = [];
+				this.searchResult.playlists = [];
+				this.songOffset = 0;
+				this.playlistOffset = 0;
+				await this.loadMore(1,this.keyword);
+				await this.loadMore(1000,this.keyword);
+				this.searchResult.code = 200;
 			},
 			//保存关键字到历史记录
 			saveKeyword(keyword) {
@@ -262,7 +270,7 @@
 			},
 			async getUrl(song) {
 				let artist = [];
-				for (const ar of song.ar) {
+				for (const ar of song.artists) {
 					artist.push(ar.name);
 				}
 				let cover = await this.getCover(song.id);
@@ -271,8 +279,8 @@
 					name: song.name,
 					artist: artist.join("/"),
 					cover: cover,
-					albumName: song.al.name,
-					albumId: song.al.id,
+					albumName: song.album.name,
+					albumId: song.album.id,
 					theme: [255, 255, 255]
 				};
 				this.setPlayingSong(songFmt);
@@ -313,6 +321,23 @@
 					fail: () => {},
 					complete: () => {}
 				});
+			},
+			async loadMore(type,keywords) {
+				if (type == 1) { //单曲
+					let res = await search({
+						keywords: keywords ? keywords : this.oldKeywordList[0],
+						offset: this.songOffset++,
+						type: 1
+					});
+					this.searchResult.songs = this.searchResult.songs.concat(res.result.songs);
+				} else if (type == 1000) { //歌单
+					let res = await search({
+						keywords: keywords ? keywords : this.oldKeywordList[0],
+						offset: this.playlistOffset++,
+						type: 1000
+					});
+					this.searchResult.playlists = this.searchResult.playlists.concat(res.result.playlists);
+				}
 			}
 		}
 	}

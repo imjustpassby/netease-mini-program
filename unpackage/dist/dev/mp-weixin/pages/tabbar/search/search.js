@@ -105,6 +105,22 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var l0 = _vm.__map(_vm.oldKeywordList, function(keyword, index) {
+    var g0 = keyword.toString()
+    return {
+      $orig: _vm.__get_orig(keyword),
+      g0: g0
+    }
+  })
+
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        l0: l0
+      }
+    }
+  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -248,8 +264,12 @@ var _vuex = __webpack_require__(/*! vuex */ 16);function _interopRequireDefault(
       forbid: '',
       isShowKeywordList: false,
       searchResult: {
-        code: 0 } };
+        code: 0,
+        songs: [],
+        playlists: [] },
 
+      songOffset: 0,
+      playlistOffset: 0 };
 
   },
   onLoad: function onLoad() {
@@ -345,18 +365,22 @@ var _vuex = __webpack_require__(/*! vuex */ 16);function _interopRequireDefault(
       this.forbid = this.forbid ? '' : '_forbid';
     },
     //执行搜索
-    doSearch: function () {var _doSearch = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2(keyword) {var res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:
+    doSearch: function () {var _doSearch = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2(keyword) {return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:if (!(
+                keyword === "")) {_context2.next = 2;break;}return _context2.abrupt("return");case 2:
                 this.keyword = keyword ? keyword : this.keyword;
-                this.saveKeyword(keyword); //保存为历史 
+                this.saveKeyword(this.keyword); //保存为历史 
                 uni.showToast({
-                  title: "搜索 " + keyword + " ...",
+                  title: "搜索 " + this.keyword + " ...",
                   icon: 'loading',
-                  duration: 2000 });_context2.next = 5;return (
+                  duration: 2000 });
 
-                  (0, _search.search)({
-                    keywords: this.keyword }));case 5:res = _context2.sent;
-
-                this.searchResult = res.result;case 7:case "end":return _context2.stop();}}}, _callee2, this);}));function doSearch(_x) {return _doSearch.apply(this, arguments);}return doSearch;}(),
+                this.searchResult.songs = [];
+                this.searchResult.playlists = [];
+                this.songOffset = 0;
+                this.playlistOffset = 0;_context2.next = 11;return (
+                  this.loadMore(1, this.keyword));case 11:_context2.next = 13;return (
+                  this.loadMore(1000, this.keyword));case 13:
+                this.searchResult.code = 200;case 14:case "end":return _context2.stop();}}}, _callee2, this);}));function doSearch(_x) {return _doSearch.apply(this, arguments);}return doSearch;}(),
 
     //保存关键字到历史记录
     saveKeyword: function saveKeyword(keyword) {var _this3 = this;
@@ -402,7 +426,7 @@ var _vuex = __webpack_require__(/*! vuex */ 16);function _interopRequireDefault(
 
     getUrl: function () {var _getUrl = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee4(song) {var _this4 = this;var artist, _iteratorNormalCompletion, _didIteratorError, _iteratorError, _iterator, _step, ar, cover, songFmt, res;return _regenerator.default.wrap(function _callee4$(_context4) {while (1) {switch (_context4.prev = _context4.next) {case 0:
                 artist = [];_iteratorNormalCompletion = true;_didIteratorError = false;_iteratorError = undefined;_context4.prev = 4;
-                for (_iterator = song.ar[Symbol.iterator](); !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {ar = _step.value;
+                for (_iterator = song.artists[Symbol.iterator](); !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {ar = _step.value;
                   artist.push(ar.name);
                 }_context4.next = 12;break;case 8:_context4.prev = 8;_context4.t0 = _context4["catch"](4);_didIteratorError = true;_iteratorError = _context4.t0;case 12:_context4.prev = 12;_context4.prev = 13;if (!_iteratorNormalCompletion && _iterator.return != null) {_iterator.return();}case 15:_context4.prev = 15;if (!_didIteratorError) {_context4.next = 18;break;}throw _iteratorError;case 18:return _context4.finish(15);case 19:return _context4.finish(12);case 20:_context4.next = 22;return (
                   this.getCover(song.id));case 22:cover = _context4.sent;
@@ -411,8 +435,8 @@ var _vuex = __webpack_require__(/*! vuex */ 16);function _interopRequireDefault(
                   name: song.name,
                   artist: artist.join("/"),
                   cover: cover,
-                  albumName: song.al.name,
-                  albumId: song.al.id,
+                  albumName: song.album.name,
+                  albumId: song.album.id,
                   theme: [255, 255, 255] };
 
                 this.setPlayingSong(songFmt);
@@ -453,7 +477,22 @@ var _vuex = __webpack_require__(/*! vuex */ 16);function _interopRequireDefault(
         fail: function fail() {},
         complete: function complete() {} });
 
-    } }) };exports.default = _default;
+    },
+    loadMore: function () {var _loadMore = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee6(type, keywords) {var res, _res;return _regenerator.default.wrap(function _callee6$(_context6) {while (1) {switch (_context6.prev = _context6.next) {case 0:if (!(
+                type == 1)) {_context6.next = 7;break;}_context6.next = 3;return (
+                  (0, _search.search)({
+                    keywords: keywords ? keywords : this.oldKeywordList[0],
+                    offset: this.songOffset++,
+                    type: 1 }));case 3:res = _context6.sent;
+
+                this.searchResult.songs = this.searchResult.songs.concat(res.result.songs);_context6.next = 12;break;case 7:if (!(
+                type == 1000)) {_context6.next = 12;break;}_context6.next = 10;return (
+                  (0, _search.search)({
+                    keywords: keywords ? keywords : this.oldKeywordList[0],
+                    offset: this.playlistOffset++,
+                    type: 1000 }));case 10:_res = _context6.sent;
+
+                this.searchResult.playlists = this.searchResult.playlists.concat(_res.result.playlists);case 12:case "end":return _context6.stop();}}}, _callee6, this);}));function loadMore(_x5, _x6) {return _loadMore.apply(this, arguments);}return loadMore;}() }) };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),

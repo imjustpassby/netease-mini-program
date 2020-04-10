@@ -54,7 +54,7 @@
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
           flex-direction: column;
-  border-color: #c8c7cc;
+  border-color: #f1f1f1;
   border-bottom-width: 1px;
   border-bottom-style: solid;
 }

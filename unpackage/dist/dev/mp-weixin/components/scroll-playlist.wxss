@@ -27,7 +27,7 @@
 .container.data-v-7281e3b4 {
   position: relative;
   width: 100%;
-  padding: 40rpx 0;
+  padding: 40rpx 20rpx;
 }
 .title.data-v-7281e3b4 {
   font-weight: bold;
@@ -36,7 +36,6 @@
 .scrollx.data-v-7281e3b4 {
   width: 100%;
   white-space: nowrap;
-  padding: 0 20rpx;
 }
 .playlist.data-v-7281e3b4 {
   display: inline-block;

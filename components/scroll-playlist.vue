@@ -47,7 +47,7 @@
 	.container {
 		position: relative;
 		width: 100%;
-		padding: 40rpx 0;
+		padding: 40rpx 20rpx;
 	}
 
 	.title {
@@ -58,7 +58,6 @@
 	.scrollx {
 		width: 100%;
 		white-space: nowrap;
-		padding: 0 20rpx;
 	}
 
 	.playlist {
