@@ -8,7 +8,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.createApp = createApp;exports.createComponent = createComponent;exports.createPage = createPage;exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance");}function _iterableToArrayLimit(arr, i) {if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {return;}var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance");}function _iterableToArray(iter) {if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) {for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {arr2[i] = arr[i];}return arr2;}}
+Object.defineProperty(exports, "__esModule", { value: true });exports.createApp = createApp;exports.createComponent = createComponent;exports.createPage = createPage;exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(n);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}
 
 var _toString = Object.prototype.toString;
 var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -757,7 +757,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -1555,7 +1555,7 @@ uni$1;exports.default = _default;
 
 /***/ }),
 
-/***/ 127:
+/***/ 135:
 /*!****************************************************************************************!*\
   !*** F:/github/HBuilderX-Project/netease_music_mini_app/components/uni-icons/icons.js ***!
   \****************************************************************************************/
@@ -8305,7 +8305,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -8326,14 +8326,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -8409,7 +8409,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -8804,14 +8804,13 @@ internalMixin(Vue);
 /***/ }),
 
 /***/ 23:
-/*!**********************************************************!*\
-  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
-  \**********************************************************/
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator/index.js ***!
+  \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! regenerator-runtime */ 24);
-
 
 /***/ }),
 
@@ -9849,136 +9848,331 @@ module.exports = g;
 
 /***/ }),
 
+/***/ 37:
+/*!**************************************************************************!*\
+  !*** F:/github/HBuilderX-Project/netease_music_mini_app/api/playList.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.getPlayListCatlist = getPlayListCatlist;exports.getPlayList = getPlayList;exports.getPlaylistDetail = getPlaylistDetail;var _request = __webpack_require__(/*! @/util/request.js */ 27);
+var mem = __webpack_require__(/*! mem */ 38);
+/*歌单分类（全部）  */
+function getPlayListCatlist() {
+  return (0, _request.request)({
+    url: '/playlist/catlist',
+    withCredentials: true });
+
+}
+/*获取歌单 ( 网友精选碟 )  */
+function getPlayList(data) {
+  return (0, _request.request)({
+    url: '/top/playlist',
+    withCredentials: true,
+    params: {
+      limit: 20,
+      cat: data.cat ? data.cat : '',
+      offset: data.offset ? 20 * data.offset : 0 } });
+
+
+}
+/* 获取歌单详情 */
+function getPlaylistDetail(data) {
+  return (0, _request.request)({
+    url: '/playlist/detail',
+    withCredentials: true,
+    params: {
+      id: data } });
+
+
+}
+
+/***/ }),
+
+/***/ 38:
+/*!***********************************!*\
+  !*** ./node_modules/mem/index.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+const mimicFn = __webpack_require__(/*! mimic-fn */ 39);
+const isPromise = __webpack_require__(/*! p-is-promise */ 40);
+const mapAgeCleaner = __webpack_require__(/*! map-age-cleaner */ 41);
+
+const cacheStore = new WeakMap();
+
+const defaultCacheKey = (...arguments_) => {
+	if (arguments_.length === 0) {
+		return '__defaultKey';
+	}
+
+	if (arguments_.length === 1) {
+		const [firstArgument] = arguments_;
+		if (
+			firstArgument === null ||
+			firstArgument === undefined ||
+			(typeof firstArgument !== 'function' && typeof firstArgument !== 'object')
+		) {
+			return firstArgument;
+		}
+	}
+
+	return JSON.stringify(arguments_);
+};
+
+const mem = (fn, options) => {
+	options = Object.assign({
+		cacheKey: defaultCacheKey,
+		cache: new Map(),
+		cachePromiseRejection: false
+	}, options);
+
+	if (typeof options.maxAge === 'number') {
+		mapAgeCleaner(options.cache);
+	}
+
+	const {cache} = options;
+	options.maxAge = options.maxAge || 0;
+
+	const setData = (key, data) => {
+		cache.set(key, {
+			data,
+			maxAge: Date.now() + options.maxAge
+		});
+	};
+
+	const memoized = function (...arguments_) {
+		const key = options.cacheKey(...arguments_);
+
+		if (cache.has(key)) {
+			return cache.get(key).data;
+		}
+
+		const cacheItem = fn.call(this, ...arguments_);
+
+		setData(key, cacheItem);
+
+		if (isPromise(cacheItem) && options.cachePromiseRejection === false) {
+			// Remove rejected promises from cache unless `cachePromiseRejection` is set to `true`
+			cacheItem.catch(() => cache.delete(key));
+		}
+
+		return cacheItem;
+	};
+
+	try {
+		// The below call will throw in some host environments
+		// See https://github.com/sindresorhus/mimic-fn/issues/10
+		mimicFn(memoized, fn);
+	} catch (_) {}
+
+	cacheStore.set(memoized, options.cache);
+
+	return memoized;
+};
+
+module.exports = mem;
+// TODO: Remove this for the next major release
+module.exports.default = mem;
+
+module.exports.clear = fn => {
+	const cache = cacheStore.get(fn);
+
+	if (cache && typeof cache.clear === 'function') {
+		cache.clear();
+	}
+};
+
+
+/***/ }),
+
+/***/ 39:
+/*!****************************************!*\
+  !*** ./node_modules/mimic-fn/index.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+module.exports = (to, from) => {
+	// TODO: use `Reflect.ownKeys()` when targeting Node.js 6
+	for (const prop of Object.getOwnPropertyNames(from).concat(Object.getOwnPropertySymbols(from))) {
+		Object.defineProperty(to, prop, Object.getOwnPropertyDescriptor(from, prop));
+	}
+
+	return to;
+};
+
+
+/***/ }),
+
 /***/ 4:
 /*!*********************************************************************!*\
   !*** F:/github/HBuilderX-Project/netease_music_mini_app/pages.json ***!
   \*********************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
 
 
 /***/ }),
 
-/***/ 45:
-/*!************************************************************************!*\
-  !*** F:/github/HBuilderX-Project/netease_music_mini_app/api/search.js ***!
-  \************************************************************************/
+/***/ 40:
+/*!********************************************!*\
+  !*** ./node_modules/p-is-promise/index.js ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.getSearchHot = getSearchHot;exports.getSearchSuggest = getSearchSuggest;exports.search = search;var _request = __webpack_require__(/*! @/util/request.js */ 27);
-
-function getSearchHot() {
-  return (0, _request.request)({
-    url: "/search/hot/detail",
-    withCredentials: true });
-
-}
-
-function getSearchSuggest(data) {
-  return (0, _request.request)({
-    url: "/search/suggest",
-    withCredentials: true,
-    params: {
-      keywords: data.keywords,
-      type: "mobile" } });
 
 
-}
+const isPromise = input => (
+	input instanceof Promise ||
+	(
+		input !== null &&
+		typeof input === 'object' &&
+		typeof input.then === 'function' &&
+		typeof input.catch === 'function'
+	)
+);
 
-/* 搜索 */
-/*  type: 搜索类型；默认为 1 即单曲 , 取值意义 : 1: 单曲, 10: 专辑, 
-             100: 歌手, 1000: 歌单, 1002: 用户, 1004: MV, 1006: 歌词, 
-             1009: 电台, 1014: 视频, 1018:综合
-         */
-function search(data) {
-  return (0, _request.request)({
-    url: '/search',
-    withCredentials: true,
-    params: {
-      keywords: data.keywords,
-      limit: 5,
-      offset: data.offset ? 5 * data.offset : 0,
-      type: data.type ? data.type : 1018 } });
+module.exports = isPromise;
+// TODO: Remove this for the next major release
+module.exports.default = isPromise;
 
-
-}
 
 /***/ }),
 
-/***/ 46:
-/*!**********************************************************************!*\
-  !*** F:/github/HBuilderX-Project/netease_music_mini_app/api/song.js ***!
-  \**********************************************************************/
+/***/ 41:
+/*!****************************************************!*\
+  !*** ./node_modules/map-age-cleaner/dist/index.js ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.getSongUrl = getSongUrl;exports.getLyric = getLyric;exports.checkMusic = checkMusic;exports.getCommentMusic = getCommentMusic;exports.getSimilarSong = getSimilarSong;exports.getSongDetail = getSongDetail;var _request = __webpack_require__(/*! @/util/request.js */ 27);
-/* 获取歌曲URL */
-function getSongUrl(data) {
-  return (0, _request.request)({
-    url: '/song/url',
-    withCredentials: true,
-    params: {
-      id: data } });
 
-
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const p_defer_1 = __importDefault(__webpack_require__(/*! p-defer */ 42));
+function mapAgeCleaner(map, property = 'maxAge') {
+    let processingKey;
+    let processingTimer;
+    let processingDeferred;
+    const cleanup = () => __awaiter(this, void 0, void 0, function* () {
+        if (processingKey !== undefined) {
+            // If we are already processing an item, we can safely exit
+            return;
+        }
+        const setupTimer = (item) => __awaiter(this, void 0, void 0, function* () {
+            processingDeferred = p_defer_1.default();
+            const delay = item[1][property] - Date.now();
+            if (delay <= 0) {
+                // Remove the item immediately if the delay is equal to or below 0
+                map.delete(item[0]);
+                processingDeferred.resolve();
+                return;
+            }
+            // Keep track of the current processed key
+            processingKey = item[0];
+            processingTimer = setTimeout(() => {
+                // Remove the item when the timeout fires
+                map.delete(item[0]);
+                if (processingDeferred) {
+                    processingDeferred.resolve();
+                }
+            }, delay);
+            // tslint:disable-next-line:strict-type-predicates
+            if (typeof processingTimer.unref === 'function') {
+                // Don't hold up the process from exiting
+                processingTimer.unref();
+            }
+            return processingDeferred.promise;
+        });
+        try {
+            for (const entry of map) {
+                yield setupTimer(entry);
+            }
+        }
+        catch (_a) {
+            // Do nothing if an error occurs, this means the timer was cleaned up and we should stop processing
+        }
+        processingKey = undefined;
+    });
+    const reset = () => {
+        processingKey = undefined;
+        if (processingTimer !== undefined) {
+            clearTimeout(processingTimer);
+            processingTimer = undefined;
+        }
+        if (processingDeferred !== undefined) { // tslint:disable-line:early-exit
+            processingDeferred.reject(undefined);
+            processingDeferred = undefined;
+        }
+    };
+    const originalSet = map.set.bind(map);
+    map.set = (key, value) => {
+        if (map.has(key)) {
+            // If the key already exist, remove it so we can add it back at the end of the map.
+            map.delete(key);
+        }
+        // Call the original `map.set`
+        const result = originalSet(key, value);
+        // If we are already processing a key and the key added is the current processed key, stop processing it
+        if (processingKey && processingKey === key) {
+            reset();
+        }
+        // Always run the cleanup method in case it wasn't started yet
+        cleanup(); // tslint:disable-line:no-floating-promises
+        return result;
+    };
+    cleanup(); // tslint:disable-line:no-floating-promises
+    return map;
 }
-/* 获取歌词 */
-function getLyric(data) {
-  return (0, _request.request)({
-    url: '/lyric',
-    withCredentials: true,
-    params: {
-      id: data } });
+exports.default = mapAgeCleaner;
+// Add support for CJS
+module.exports = mapAgeCleaner;
+module.exports.default = mapAgeCleaner;
 
 
-}
-/* 音乐是否可用 */
-function checkMusic(data) {
-  return (0, _request.request)({
-    url: '/check/music',
-    withCredentials: true,
-    params: {
-      id: data } });
+/***/ }),
 
+/***/ 42:
+/*!***************************************!*\
+  !*** ./node_modules/p-defer/index.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-}
-/* 歌曲评论 */
-function getCommentMusic(data) {
-  return (0, _request.request)({
-    url: '/comment/music',
-    withCredentials: true,
-    params: {
-      id: data,
-      limit: 30 } });
+"use strict";
 
+module.exports = () => {
+	const ret = {};
 
-}
-/* 获取相似歌曲 */
-function getSimilarSong(data) {
-  return (0, _request.request)({
-    url: '/simi/song',
-    withCredentials: true,
-    params: {
-      id: data } });
+	ret.promise = new Promise((resolve, reject) => {
+		ret.resolve = resolve;
+		ret.reject = reject;
+	});
 
+	return ret;
+};
 
-}
-/* 获取歌曲详情 */
-function getSongDetail(data) {
-  return (0, _request.request)({
-    url: '/song/detail',
-    withCredentials: true,
-    params: {
-      ids: data } });
-
-
-}
 
 /***/ }),
 
@@ -9990,7 +10184,7 @@ function getSongDetail(data) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {var _package = __webpack_require__(/*! ../package.json */ 6);function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}
+/* WEBPACK VAR INJECTION */(function(uni) {var _package = __webpack_require__(/*! ../package.json */ 6);function _createSuper(Derived) {return function () {var Super = _getPrototypeOf(Derived),result;if (_isNativeReflectConstruct()) {var NewTarget = _getPrototypeOf(this).constructor;result = Reflect.construct(Super, arguments, NewTarget);} else {result = Super.apply(this, arguments);}return _possibleConstructorReturn(this, result);};}function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _isNativeReflectConstruct() {if (typeof Reflect === "undefined" || !Reflect.construct) return false;if (Reflect.construct.sham) return false;if (typeof Proxy === "function") return true;try {Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));return true;} catch (e) {return false;}}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}
 
 var STAT_VERSION = _package.version;
 var STAT_URL = 'https://tongji.dcloud.io/uni/stat';
@@ -10680,7 +10874,7 @@ Util = /*#__PURE__*/function () {
 
 
 
-Stat = /*#__PURE__*/function (_Util) {_inherits(Stat, _Util);_createClass(Stat, null, [{ key: "getInstance", value: function getInstance()
+Stat = /*#__PURE__*/function (_Util) {_inherits(Stat, _Util);var _super = _createSuper(Stat);_createClass(Stat, null, [{ key: "getInstance", value: function getInstance()
     {
       if (!this.instance) {
         this.instance = new Stat();
@@ -10688,7 +10882,7 @@ Stat = /*#__PURE__*/function (_Util) {_inherits(Stat, _Util);_createClass(Stat, 
       return this.instance;
     } }]);
   function Stat() {var _this6;_classCallCheck(this, Stat);
-    _this6 = _possibleConstructorReturn(this, _getPrototypeOf(Stat).call(this));
+    _this6 = _super.call(this);
     _this6.instance = null;
     // 注册拦截器
     if (typeof uni.addInterceptor === 'function' && "development" !== 'development') {
@@ -10869,6 +11063,127 @@ main();
 
 /***/ }),
 
+/***/ 51:
+/*!************************************************************************!*\
+  !*** F:/github/HBuilderX-Project/netease_music_mini_app/api/search.js ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.getSearchHot = getSearchHot;exports.getSearchSuggest = getSearchSuggest;exports.search = search;var _request = __webpack_require__(/*! @/util/request.js */ 27);
+
+function getSearchHot() {
+  return (0, _request.request)({
+    url: "/search/hot/detail",
+    withCredentials: true });
+
+}
+
+function getSearchSuggest(data) {
+  return (0, _request.request)({
+    url: "/search/suggest",
+    withCredentials: true,
+    params: {
+      keywords: data.keywords,
+      type: "mobile" } });
+
+
+}
+
+/* 搜索 */
+/*  type: 搜索类型；默认为 1 即单曲 , 取值意义 : 1: 单曲, 10: 专辑, 
+             100: 歌手, 1000: 歌单, 1002: 用户, 1004: MV, 1006: 歌词, 
+             1009: 电台, 1014: 视频, 1018:综合
+         */
+function search(data) {
+  return (0, _request.request)({
+    url: '/search',
+    withCredentials: true,
+    params: {
+      keywords: data.keywords,
+      limit: 5,
+      offset: data.offset ? 5 * data.offset : 0,
+      type: data.type ? data.type : 1018 } });
+
+
+}
+
+/***/ }),
+
+/***/ 52:
+/*!**********************************************************************!*\
+  !*** F:/github/HBuilderX-Project/netease_music_mini_app/api/song.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.getSongUrl = getSongUrl;exports.getLyric = getLyric;exports.checkMusic = checkMusic;exports.getCommentMusic = getCommentMusic;exports.getSimilarSong = getSimilarSong;exports.getSongDetail = getSongDetail;var _request = __webpack_require__(/*! @/util/request.js */ 27);
+/* 获取歌曲URL */
+function getSongUrl(data) {
+  return (0, _request.request)({
+    url: '/song/url',
+    withCredentials: true,
+    params: {
+      id: data } });
+
+
+}
+/* 获取歌词 */
+function getLyric(data) {
+  return (0, _request.request)({
+    url: '/lyric',
+    withCredentials: true,
+    params: {
+      id: data } });
+
+
+}
+/* 音乐是否可用 */
+function checkMusic(data) {
+  return (0, _request.request)({
+    url: '/check/music',
+    withCredentials: true,
+    params: {
+      id: data } });
+
+
+}
+/* 歌曲评论 */
+function getCommentMusic(data) {
+  return (0, _request.request)({
+    url: '/comment/music',
+    withCredentials: true,
+    params: {
+      id: data,
+      limit: 30 } });
+
+
+}
+/* 获取相似歌曲 */
+function getSimilarSong(data) {
+  return (0, _request.request)({
+    url: '/simi/song',
+    withCredentials: true,
+    params: {
+      id: data } });
+
+
+}
+/* 获取歌曲详情 */
+function getSongDetail(data) {
+  return (0, _request.request)({
+    url: '/song/detail',
+    withCredentials: true,
+    params: {
+      ids: data } });
+
+
+}
+
+/***/ }),
+
 /***/ 6:
 /*!******************************************************!*\
   !*** ./node_modules/@dcloudio/uni-stat/package.json ***!
@@ -10876,11 +11191,11 @@ main();
 /*! exports provided: _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _shasum, _spec, _where, author, bugs, bundleDependencies, deprecated, description, devDependencies, files, gitHead, homepage, license, main, name, repository, scripts, version, default */
 /***/ (function(module) {
 
-module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.0.0-26920200402001","_inBundle":false,"_integrity":"sha512-Mdhd/IRuUMHWPj3TtWrBb0kghRBA0YiO2L2THMFvhCTfQDSoSq1vwOdAx5n/8fIORAvG0uVQoYl73xeVFZML5A==","_location":"/@dcloudio/uni-stat","_phantomChildren":{},"_requested":{"type":"tag","registry":true,"raw":"@dcloudio/uni-stat@next","name":"@dcloudio/uni-stat","escapedName":"@dcloudio%2funi-stat","scope":"@dcloudio","rawSpec":"next","saveSpec":null,"fetchSpec":"next"},"_requiredBy":["#USER","/","/@dcloudio/vue-cli-plugin-uni"],"_resolved":"https://registry.npmjs.org/@dcloudio/uni-stat/-/uni-stat-2.0.0-26920200402001.tgz","_shasum":"5f66f5dc252ac00c6064857dee8251ee51aa2391","_spec":"@dcloudio/uni-stat@next","_where":"/Users/guoshengqiang/Documents/dcloud-plugins/release/uniapp-cli","author":"","bugs":{"url":"https://github.com/dcloudio/uni-app/issues"},"bundleDependencies":false,"deprecated":false,"description":"","devDependencies":{"@babel/core":"^7.5.5","@babel/preset-env":"^7.5.5","eslint":"^6.1.0","rollup":"^1.19.3","rollup-plugin-babel":"^4.3.3","rollup-plugin-clear":"^2.0.7","rollup-plugin-commonjs":"^10.0.2","rollup-plugin-copy":"^3.1.0","rollup-plugin-eslint":"^7.0.0","rollup-plugin-json":"^4.0.0","rollup-plugin-node-resolve":"^5.2.0","rollup-plugin-replace":"^2.2.0","rollup-plugin-uglify":"^6.0.2"},"files":["dist","package.json","LICENSE"],"gitHead":"bfdbb7b3000599679ef8cb29a969e6bd447b00c7","homepage":"https://github.com/dcloudio/uni-app#readme","license":"Apache-2.0","main":"dist/index.js","name":"@dcloudio/uni-stat","repository":{"type":"git","url":"git+https://github.com/dcloudio/uni-app.git","directory":"packages/uni-stat"},"scripts":{"build":"NODE_ENV=production rollup -c rollup.config.js","dev":"NODE_ENV=development rollup -w -c rollup.config.js"},"version":"2.0.0-26920200402001"};
+module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.0.0-261120200409001","_inBundle":false,"_integrity":"sha512-iM1vsCzUEg80lCM7rSAkh+28ahjS9zQgiGsEoHxawCD9s7rTFnSRIaOuc7WHeQt6EclGUUIrMccYHXsLsNAXZg==","_location":"/@dcloudio/uni-stat","_phantomChildren":{},"_requested":{"type":"tag","registry":true,"raw":"@dcloudio/uni-stat@next","name":"@dcloudio/uni-stat","escapedName":"@dcloudio%2funi-stat","scope":"@dcloudio","rawSpec":"next","saveSpec":null,"fetchSpec":"next"},"_requiredBy":["#USER","/","/@dcloudio/vue-cli-plugin-uni"],"_resolved":"https://registry.npmjs.org/@dcloudio/uni-stat/-/uni-stat-2.0.0-261120200409001.tgz","_shasum":"e9daeef120f133bf3d4ca0505f5b2abed0e874a7","_spec":"@dcloudio/uni-stat@next","_where":"/Users/guoshengqiang/Documents/dcloud-plugins/release/uniapp-cli","author":"","bugs":{"url":"https://github.com/dcloudio/uni-app/issues"},"bundleDependencies":false,"deprecated":false,"description":"","devDependencies":{"@babel/core":"^7.5.5","@babel/preset-env":"^7.5.5","eslint":"^6.1.0","rollup":"^1.19.3","rollup-plugin-babel":"^4.3.3","rollup-plugin-clear":"^2.0.7","rollup-plugin-commonjs":"^10.0.2","rollup-plugin-copy":"^3.1.0","rollup-plugin-eslint":"^7.0.0","rollup-plugin-json":"^4.0.0","rollup-plugin-node-resolve":"^5.2.0","rollup-plugin-replace":"^2.2.0","rollup-plugin-uglify":"^6.0.2"},"files":["dist","package.json","LICENSE"],"gitHead":"ff0877f516c1cc986cf2d7eae2bf5030c58050f9","homepage":"https://github.com/dcloudio/uni-app#readme","license":"Apache-2.0","main":"dist/index.js","name":"@dcloudio/uni-stat","repository":{"type":"git","url":"git+https://github.com/dcloudio/uni-app.git","directory":"packages/uni-stat"},"scripts":{"build":"NODE_ENV=production rollup -c rollup.config.js","dev":"NODE_ENV=development rollup -w -c rollup.config.js"},"version":"2.0.0-261120200409001"};
 
 /***/ }),
 
-/***/ 63:
+/***/ 69:
 /*!************************************************************************!*\
   !*** F:/github/HBuilderX-Project/netease_music_mini_app/util/utils.js ***!
   \************************************************************************/
@@ -10924,323 +11239,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.formatTime
 
 /***/ }),
 
-/***/ 64:
-/*!**************************************************************************!*\
-  !*** F:/github/HBuilderX-Project/netease_music_mini_app/api/playList.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.getPlayListCatlist = getPlayListCatlist;exports.getPlayList = getPlayList;exports.getPlaylistDetail = getPlaylistDetail;var _request = __webpack_require__(/*! @/util/request.js */ 27);
-var mem = __webpack_require__(/*! mem */ 65);
-/*歌单分类（全部）  */
-function getPlayListCatlist() {
-  return (0, _request.request)({
-    url: '/playlist/catlist',
-    withCredentials: true });
-
-}
-/*获取歌单 ( 网友精选碟 )  */
-function getPlayList(data) {
-  return (0, _request.request)({
-    url: '/top/playlist',
-    withCredentials: true,
-    params: {
-      limit: 20,
-      cat: data.cat ? data.cat : '',
-      offset: data.offset ? 20 * data.offset : 0 } });
-
-
-}
-/* 获取歌单详情 */
-function getPlaylistDetail(data) {
-  return (0, _request.request)({
-    url: '/playlist/detail',
-    withCredentials: true,
-    params: {
-      id: data } });
-
-
-}
-
-/***/ }),
-
-/***/ 65:
-/*!***********************************!*\
-  !*** ./node_modules/mem/index.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-const mimicFn = __webpack_require__(/*! mimic-fn */ 66);
-const isPromise = __webpack_require__(/*! p-is-promise */ 67);
-const mapAgeCleaner = __webpack_require__(/*! map-age-cleaner */ 68);
-
-const cacheStore = new WeakMap();
-
-const defaultCacheKey = (...arguments_) => {
-	if (arguments_.length === 0) {
-		return '__defaultKey';
-	}
-
-	if (arguments_.length === 1) {
-		const [firstArgument] = arguments_;
-		if (
-			firstArgument === null ||
-			firstArgument === undefined ||
-			(typeof firstArgument !== 'function' && typeof firstArgument !== 'object')
-		) {
-			return firstArgument;
-		}
-	}
-
-	return JSON.stringify(arguments_);
-};
-
-const mem = (fn, options) => {
-	options = Object.assign({
-		cacheKey: defaultCacheKey,
-		cache: new Map(),
-		cachePromiseRejection: false
-	}, options);
-
-	if (typeof options.maxAge === 'number') {
-		mapAgeCleaner(options.cache);
-	}
-
-	const {cache} = options;
-	options.maxAge = options.maxAge || 0;
-
-	const setData = (key, data) => {
-		cache.set(key, {
-			data,
-			maxAge: Date.now() + options.maxAge
-		});
-	};
-
-	const memoized = function (...arguments_) {
-		const key = options.cacheKey(...arguments_);
-
-		if (cache.has(key)) {
-			return cache.get(key).data;
-		}
-
-		const cacheItem = fn.call(this, ...arguments_);
-
-		setData(key, cacheItem);
-
-		if (isPromise(cacheItem) && options.cachePromiseRejection === false) {
-			// Remove rejected promises from cache unless `cachePromiseRejection` is set to `true`
-			cacheItem.catch(() => cache.delete(key));
-		}
-
-		return cacheItem;
-	};
-
-	try {
-		// The below call will throw in some host environments
-		// See https://github.com/sindresorhus/mimic-fn/issues/10
-		mimicFn(memoized, fn);
-	} catch (_) {}
-
-	cacheStore.set(memoized, options.cache);
-
-	return memoized;
-};
-
-module.exports = mem;
-// TODO: Remove this for the next major release
-module.exports.default = mem;
-
-module.exports.clear = fn => {
-	const cache = cacheStore.get(fn);
-
-	if (cache && typeof cache.clear === 'function') {
-		cache.clear();
-	}
-};
-
-
-/***/ }),
-
-/***/ 66:
-/*!****************************************!*\
-  !*** ./node_modules/mimic-fn/index.js ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-module.exports = (to, from) => {
-	// TODO: use `Reflect.ownKeys()` when targeting Node.js 6
-	for (const prop of Object.getOwnPropertyNames(from).concat(Object.getOwnPropertySymbols(from))) {
-		Object.defineProperty(to, prop, Object.getOwnPropertyDescriptor(from, prop));
-	}
-
-	return to;
-};
-
-
-/***/ }),
-
-/***/ 67:
-/*!********************************************!*\
-  !*** ./node_modules/p-is-promise/index.js ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-const isPromise = input => (
-	input instanceof Promise ||
-	(
-		input !== null &&
-		typeof input === 'object' &&
-		typeof input.then === 'function' &&
-		typeof input.catch === 'function'
-	)
-);
-
-module.exports = isPromise;
-// TODO: Remove this for the next major release
-module.exports.default = isPromise;
-
-
-/***/ }),
-
-/***/ 68:
-/*!****************************************************!*\
-  !*** ./node_modules/map-age-cleaner/dist/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const p_defer_1 = __importDefault(__webpack_require__(/*! p-defer */ 69));
-function mapAgeCleaner(map, property = 'maxAge') {
-    let processingKey;
-    let processingTimer;
-    let processingDeferred;
-    const cleanup = () => __awaiter(this, void 0, void 0, function* () {
-        if (processingKey !== undefined) {
-            // If we are already processing an item, we can safely exit
-            return;
-        }
-        const setupTimer = (item) => __awaiter(this, void 0, void 0, function* () {
-            processingDeferred = p_defer_1.default();
-            const delay = item[1][property] - Date.now();
-            if (delay <= 0) {
-                // Remove the item immediately if the delay is equal to or below 0
-                map.delete(item[0]);
-                processingDeferred.resolve();
-                return;
-            }
-            // Keep track of the current processed key
-            processingKey = item[0];
-            processingTimer = setTimeout(() => {
-                // Remove the item when the timeout fires
-                map.delete(item[0]);
-                if (processingDeferred) {
-                    processingDeferred.resolve();
-                }
-            }, delay);
-            // tslint:disable-next-line:strict-type-predicates
-            if (typeof processingTimer.unref === 'function') {
-                // Don't hold up the process from exiting
-                processingTimer.unref();
-            }
-            return processingDeferred.promise;
-        });
-        try {
-            for (const entry of map) {
-                yield setupTimer(entry);
-            }
-        }
-        catch (_a) {
-            // Do nothing if an error occurs, this means the timer was cleaned up and we should stop processing
-        }
-        processingKey = undefined;
-    });
-    const reset = () => {
-        processingKey = undefined;
-        if (processingTimer !== undefined) {
-            clearTimeout(processingTimer);
-            processingTimer = undefined;
-        }
-        if (processingDeferred !== undefined) { // tslint:disable-line:early-exit
-            processingDeferred.reject(undefined);
-            processingDeferred = undefined;
-        }
-    };
-    const originalSet = map.set.bind(map);
-    map.set = (key, value) => {
-        if (map.has(key)) {
-            // If the key already exist, remove it so we can add it back at the end of the map.
-            map.delete(key);
-        }
-        // Call the original `map.set`
-        const result = originalSet(key, value);
-        // If we are already processing a key and the key added is the current processed key, stop processing it
-        if (processingKey && processingKey === key) {
-            reset();
-        }
-        // Always run the cleanup method in case it wasn't started yet
-        cleanup(); // tslint:disable-line:no-floating-promises
-        return result;
-    };
-    cleanup(); // tslint:disable-line:no-floating-promises
-    return map;
-}
-exports.default = mapAgeCleaner;
-// Add support for CJS
-module.exports = mapAgeCleaner;
-module.exports.default = mapAgeCleaner;
-
-
-/***/ }),
-
-/***/ 69:
-/*!***************************************!*\
-  !*** ./node_modules/p-defer/index.js ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-module.exports = () => {
-	const ret = {};
-
-	ret.promise = new Promise((resolve, reject) => {
-		ret.resolve = resolve;
-		ret.reject = reject;
-	});
-
-	return ret;
-};
-
-
-/***/ }),
-
 /***/ 7:
 /*!**************************************************************************************!*\
   !*** F:/github/HBuilderX-Project/netease_music_mini_app/pages.json?{"type":"style"} ***!
@@ -11249,7 +11247,42 @@ module.exports = () => {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/tabbar/home/home": {}, "pages/tabbar/playlist/playlist": { "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/tabbar/search/search": {}, "pages/ranking/ranking": { "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/playlistDetail/playlist-detail": { "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/songDetail/song-detail": {} }, "globalStyle": { "navigationBarTextStyle": "white", "navigationBarTitleText": "Coisin4Music", "navigationBarBackgroundColor": "#252525", "backgroundColor": "#252525" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/tabbar/home/home": {}, "pages/tabbar/playlist/playlist": {}, "pages/tabbar/search/search": {}, "pages/ranking/ranking": {}, "pages/playlistDetail/playlist-detail": {}, "pages/songDetail/song-detail": {} }, "globalStyle": { "navigationBarTextStyle": "white", "navigationBarTitleText": "Coisin4Music", "navigationBarBackgroundColor": "#252525", "backgroundColor": "#252525" } };exports.default = _default;
+
+/***/ }),
+
+/***/ 78:
+/*!*************************************************************************!*\
+  !*** F:/github/HBuilderX-Project/netease_music_mini_app/api/comment.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.getCommentMusic = getCommentMusic;exports.getCommentMv = getCommentMv;var _request = __webpack_require__(/*! @/util/request */ 27);
+/* 歌曲评论 */
+function getCommentMusic(data) {
+  return (0, _request.request)({
+    url: '/comment/music',
+    withCredentials: true,
+    params: {
+      id: data,
+      limit: 3 } });
+
+
+}
+/* 获取mv评论 */
+function getCommentMv(data) {
+  return (0, _request.request)({
+    url: '/comment/mv',
+    withCredentials: true,
+    params: {
+      id: data,
+      limit: 3,
+      offset: 0 } });
+
+
+}
 
 /***/ }),
 

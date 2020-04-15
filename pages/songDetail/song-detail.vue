@@ -23,6 +23,7 @@
 						</uni-list-item>
 					</uni-list>
 				</view>
+				<comment :hotComments="hotComments"></comment>
 			</view>
 		</view>
 	</view>
@@ -35,19 +36,25 @@
 		getSongDetail,
 		getSongUrl
 	} from "@/api/song.js"
-	import songList from "@/components/song-list.vue"
+	import {
+		getCommentMusic
+	} from "@/api/comment.js"
+	import songList from "@/components/song-list/song-list.vue"
+	import comment from "@/components/comment/comment.vue"
 	import {
 		mapState,
 		mapMutations
 	} from "vuex"
 	export default {
 		components: {
-			songList
+			songList,
+			comment
 		},
 		data() {
 			return {
 				lyric: "",
-				similarSong: []
+				similarSong: [],
+				hotComments: []
 			};
 		},
 		computed: mapState(['playingSong']),
@@ -103,6 +110,7 @@
 				})
 				await this.getLyric(this.playingSong.id);
 				await this.getSimilarSong(this.playingSong.id);
+				await this.getComments(this.playingSong.id);
 			},
 			async playSong(song) {
 				await this.getUrl(song);
@@ -133,7 +141,11 @@
 				}).catch(e => {
 					console.log(e);
 				});
-			}
+			},
+			async getComments(id) {
+				let res = await getCommentMusic(id);
+				res.hotComments.length > 0 ? this.hotComments = res.hotComments.slice(0, 3) : this.hotComments = res.comments;
+			},
 		}
 	}
 </script>
@@ -181,6 +193,7 @@
 			color: $uni-text-color-grey;
 		}
 	}
+
 	.simi {
 		width: 95vw;
 		min-height: 366px;
@@ -190,41 +203,41 @@
 		margin-top: 20px;
 		padding: 20rpx;
 		overflow: hidden;
-	
+
 		.title {
 			font-weight: bold;
 		}
-	
+
 		.list {
 			display: flex;
 			flex-direction: column;
-	
+
 			&-item {
 				margin-top: 20rpx;
 				display: flex;
 				flex-direction: row;
-	
+
 				.song-album {
 					display: flex;
 					align-items: flex-start;
 					justify-content: center;
-	
+
 					image {
 						width: 100rpx;
 						height: 100rpx;
 						border-radius: 10rpx;
 					}
 				}
-	
+
 				.song-detail {
 					padding: 10rpx 0 20rpx 20rpx;
 					line-height: 1.3em;
 					text-overflow: ellipsis;
-	
+
 					h2 {
 						font-size: 14px;
 					}
-	
+
 					p {
 						font-size: 12px;
 						font-weight: 200;

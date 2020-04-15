@@ -106,7 +106,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components
+var components = {
+  "song-list": function() {
+    return Promise.all(/*! import() | components/song-list/song-list */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/song-list/song-list")]).then(__webpack_require__.bind(null, /*! @/components/song-list/song-list.vue */ 81))
+  },
+  "scroll-playlist": function() {
+    return __webpack_require__.e(/*! import() | components/scroll-playlist/scroll-playlist */ "components/scroll-playlist/scroll-playlist").then(__webpack_require__.bind(null, /*! @/components/scroll-playlist/scroll-playlist.vue */ 88))
+  },
+  "ranking-list": function() {
+    return Promise.all(/*! import() | components/ranking-list/ranking-list */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/ranking-list/ranking-list")]).then(__webpack_require__.bind(null, /*! @/components/ranking-list/ranking-list.vue */ 95))
+  }
+}
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -153,7 +163,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 23));
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 23));
 
 
 
@@ -171,7 +181,7 @@ var _home = __webpack_require__(/*! @/api/home.js */ 26);
 
 
 
-var _ranking = __webpack_require__(/*! @/api/ranking.js */ 28);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var songList = function songList() {Promise.all(/*! require.ensure | components/song-list */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/song-list")]).then((function () {return resolve(__webpack_require__(/*! @/components/song-list.vue */ 80));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var scrollPlaylist = function scrollPlaylist() {__webpack_require__.e(/*! require.ensure | components/scroll-playlist */ "components/scroll-playlist").then((function () {return resolve(__webpack_require__(/*! @/components/scroll-playlist.vue */ 87));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var rankingList = function rankingList() {Promise.all(/*! require.ensure | components/ranking-list */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/ranking-list")]).then((function () {return resolve(__webpack_require__(/*! @/components/ranking-list.vue */ 94));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _ranking = __webpack_require__(/*! @/api/ranking.js */ 28);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _createForOfIteratorHelper(o) {if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) {if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) {var i = 0;var F = function F() {};return { s: F, n: function n() {if (i >= o.length) return { done: true };return { done: false, value: o[i++] };}, e: function e(_e) {throw _e;}, f: F };}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}var it,normalCompletion = true,didErr = false,err;return { s: function s() {it = o[Symbol.iterator]();}, n: function n() {var step = it.next();normalCompletion = step.done;return step;}, e: function e(_e2) {didErr = true;err = _e2;}, f: function f() {try {if (!normalCompletion && it.return != null) it.return();} finally {if (didErr) throw err;}} };}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(n);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var songList = function songList() {Promise.all(/*! require.ensure | components/song-list/song-list */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/song-list/song-list")]).then((function () {return resolve(__webpack_require__(/*! @/components/song-list/song-list.vue */ 81));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var scrollPlaylist = function scrollPlaylist() {__webpack_require__.e(/*! require.ensure | components/scroll-playlist/scroll-playlist */ "components/scroll-playlist/scroll-playlist").then((function () {return resolve(__webpack_require__(/*! @/components/scroll-playlist/scroll-playlist.vue */ 88));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var rankingList = function rankingList() {Promise.all(/*! require.ensure | components/ranking-list/ranking-list */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/ranking-list/ranking-list")]).then((function () {return resolve(__webpack_require__(/*! @/components/ranking-list/ranking-list.vue */ 95));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 {
@@ -192,37 +202,37 @@ var _ranking = __webpack_require__(/*! @/api/ranking.js */ 28);function _interop
       rankingNewSongTracks: {} };
 
   },
-  onLoad: function () {var _onLoad = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
-                this.getNewSong());case 2:_context.next = 4;return (
-                this.getPersonalized());case 4:_context.next = 6;return (
+  onLoad: function onLoad() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
+                _this.getNewSong());case 2:_context.next = 4;return (
+                _this.getPersonalized());case 4:_context.next = 6;return (
 
-                this.getRanking("3"));case 6:this.rankingRising = _context.sent;
-              this.rankingRisingTracks.tracks = this.rankingRising.tracks.slice(0, 3);
-              this.rankingRisingTracks.cover = "http://p2.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg";
-              this.rankingRising.title = "飙升榜";_context.next = 12;return (
+                _this.getRanking("3"));case 6:_this.rankingRising = _context.sent;
+              _this.rankingRisingTracks.tracks = _this.rankingRising.tracks.slice(0, 3);
+              _this.rankingRisingTracks.cover = "http://p2.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg";
+              _this.rankingRising.title = "飙升榜";_context.next = 12;return (
 
-                this.getRanking("1"));case 12:this.rankingHot = _context.sent;
-              this.rankingHotTracks.tracks = this.rankingHot.tracks.slice(0, 3);
-              this.rankingHotTracks.cover = "http://p1.music.126.net/GhhuF6Ep5Tq9IEvLsyCN7w==/18708190348409091.jpg";
-              this.rankingHot.title = "热歌榜";_context.next = 18;return (
+                _this.getRanking("1"));case 12:_this.rankingHot = _context.sent;
+              _this.rankingHotTracks.tracks = _this.rankingHot.tracks.slice(0, 3);
+              _this.rankingHotTracks.cover = "http://p1.music.126.net/GhhuF6Ep5Tq9IEvLsyCN7w==/18708190348409091.jpg";
+              _this.rankingHot.title = "热歌榜";_context.next = 18;return (
 
-                this.getRanking("0"));case 18:this.rankingNewSong = _context.sent;
-              this.rankingNewSongTracks.tracks = this.rankingNewSong.tracks.slice(0, 3);
-              this.rankingNewSongTracks.cover = "http://p2.music.126.net/N2HO5xfYEqyQ8q6oxCw8IQ==/18713687906568048.jpg";
-              this.rankingNewSong.title = "新歌榜";case 22:case "end":return _context.stop();}}}, _callee, this);}));function onLoad() {return _onLoad.apply(this, arguments);}return onLoad;}(),
-
+                _this.getRanking("0"));case 18:_this.rankingNewSong = _context.sent;
+              _this.rankingNewSongTracks.tracks = _this.rankingNewSong.tracks.slice(0, 3);
+              _this.rankingNewSongTracks.cover = "http://p2.music.126.net/N2HO5xfYEqyQ8q6oxCw8IQ==/18713687906568048.jpg";
+              _this.rankingNewSong.title = "新歌榜";case 22:case "end":return _context.stop();}}}, _callee);}))();
+  },
   methods: {
     //新歌速递
-    getNewSong: function () {var _getNewSong = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var personalizedNewSong;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
+    getNewSong: function getNewSong() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var personalizedNewSong;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
                   (0, _home.getPersonalizedNewSong)());case 2:personalizedNewSong = _context2.sent;
-                this.newSong = personalizedNewSong.result.map(function (item) {
+                _this2.newSong = personalizedNewSong.result.map(function (item) {
                   var artist = [];
                   var artistId = item.song.artists.map(function (a) {
                     return a.id;
-                  });var _iteratorNormalCompletion = true;var _didIteratorError = false;var _iteratorError = undefined;try {
-                    for (var _iterator = item.song.artists[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {var ar = _step.value;
+                  });var _iterator = _createForOfIteratorHelper(
+                  item.song.artists),_step;try {for (_iterator.s(); !(_step = _iterator.n()).done;) {var ar = _step.value;
                       artist.push(ar.name);
-                    }} catch (err) {_didIteratorError = true;_iteratorError = err;} finally {try {if (!_iteratorNormalCompletion && _iterator.return != null) {_iterator.return();}} finally {if (_didIteratorError) {throw _iteratorError;}}}
+                    }} catch (err) {_iterator.e(err);} finally {_iterator.f();}
                   return {
                     name: item.name,
                     id: item.id,
@@ -234,15 +244,15 @@ var _ranking = __webpack_require__(/*! @/api/ranking.js */ 28);function _interop
                     albumId: item.song.album.id,
                     theme: [255, 255, 255] };
 
-                });case 4:case "end":return _context2.stop();}}}, _callee2, this);}));function getNewSong() {return _getNewSong.apply(this, arguments);}return getNewSong;}(),
-
+                });case 4:case "end":return _context2.stop();}}}, _callee2);}))();
+    },
     //热门歌单
-    getPersonalized: function () {var _getPersonalized2 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var result;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:_context3.next = 2;return (
+    getPersonalized: function getPersonalized() {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var result;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:_context3.next = 2;return (
                   (0, _home.getPersonalized)());case 2:result = _context3.sent;
-                this.personalized = result.result;case 4:case "end":return _context3.stop();}}}, _callee3, this);}));function getPersonalized() {return _getPersonalized2.apply(this, arguments);}return getPersonalized;}(),
-
+                _this3.personalized = result.result;case 4:case "end":return _context3.stop();}}}, _callee3);}))();
+    },
     //获取某个排行榜
-    getRanking: function () {var _getRanking = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee4(idx) {var res, rankDetail;return _regenerator.default.wrap(function _callee4$(_context4) {while (1) {switch (_context4.prev = _context4.next) {case 0:_context4.next = 2;return (
+    getRanking: function getRanking(idx) {return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee4() {var res, rankDetail;return _regenerator.default.wrap(function _callee4$(_context4) {while (1) {switch (_context4.prev = _context4.next) {case 0:_context4.next = 2;return (
                   (0, _ranking.getRankingList)(idx));case 2:res = _context4.sent;
                 rankDetail = {
                   id: res.playlist.id,
@@ -253,10 +263,10 @@ var _ranking = __webpack_require__(/*! @/api/ranking.js */ 28);function _interop
                   var artist = [];
                   var artistId = item.ar.map(function (a) {
                     return a.id;
-                  });var _iteratorNormalCompletion2 = true;var _didIteratorError2 = false;var _iteratorError2 = undefined;try {
-                    for (var _iterator2 = item.ar[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {var ar = _step2.value;
+                  });var _iterator2 = _createForOfIteratorHelper(
+                  item.ar),_step2;try {for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {var ar = _step2.value;
                       artist.push(ar.name);
-                    }} catch (err) {_didIteratorError2 = true;_iteratorError2 = err;} finally {try {if (!_iteratorNormalCompletion2 && _iterator2.return != null) {_iterator2.return();}} finally {if (_didIteratorError2) {throw _iteratorError2;}}}
+                    }} catch (err) {_iterator2.e(err);} finally {_iterator2.f();}
                   return {
                     name: item.name,
                     id: item.id,
@@ -270,8 +280,8 @@ var _ranking = __webpack_require__(/*! @/api/ranking.js */ 28);function _interop
                     theme: [255, 255, 255] };
 
                 });return _context4.abrupt("return",
-                rankDetail);case 6:case "end":return _context4.stop();}}}, _callee4);}));function getRanking(_x) {return _getRanking.apply(this, arguments);}return getRanking;}()
-
+                rankDetail);case 6:case "end":return _context4.stop();}}}, _callee4);}))();
+    }
     //飙升榜
   } };exports.default = _default;
 

@@ -9,9 +9,9 @@
 </template>
 
 <script>
-	import songList from "@/components/song-list.vue"
-	import scrollPlaylist from "@/components/scroll-playlist.vue"
-	import rankingList from "@/components/ranking-list.vue"
+	import songList from "@/components/song-list/song-list.vue"
+	import scrollPlaylist from "@/components/scroll-playlist/scroll-playlist.vue"
+	import rankingList from "@/components/ranking-list/ranking-list.vue"
 	import {
 		getPersonalizedNewSong,
 		getPersonalized

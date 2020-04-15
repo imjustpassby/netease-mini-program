@@ -47,12 +47,11 @@
 	.container {
 		position: relative;
 		width: 100%;
-		padding: 40rpx 20rpx;
+		padding: 10px 10px;
 	}
 
 	.title {
 		font-weight: bold;
-		margin-left: 20rpx;
 	}
 	
 	.scrollx {

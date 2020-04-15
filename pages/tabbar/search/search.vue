@@ -128,7 +128,6 @@
 				this.loadDefaultKeyword();
 				this.loadOldKeyword();
 				this.loadHotKeyword();
-
 			},
 			blur() {
 				uni.hideKeyboard()
@@ -162,6 +161,7 @@
 				if (!keyword) {
 					this.keywordList = [];
 					this.isShowKeywordList = false;
+					this.searchResult.code = 0;
 					return;
 				}
 				// this.isShowKeywordList = true;
@@ -216,7 +216,8 @@
 				uni.showToast({
 					title: "搜索 " + this.keyword + " ...",
 					icon: 'loading',
-					duration: 2000
+					duration: 1000,
+					mask: true
 				});
 				this.searchResult.songs = [];
 				this.searchResult.playlists = [];

@@ -104,11 +104,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"components/ranking-list":1,"components/song-list":1,"components/scroll-playlist":1,"components/mehaotian-search-revision/mehaotian-search-revision":1,"components/uni-collapse-item/uni-collapse-item":1,"components/uni-collapse/uni-collapse":1,"components/uni-icons/uni-icons":1};
+/******/ 		var cssChunks = {"components/ranking-list/ranking-list":1,"components/song-list/song-list":1,"components/scroll-playlist/scroll-playlist":1,"components/mehaotian-search-revision/mehaotian-search-revision":1,"components/uni-collapse-item/uni-collapse-item":1,"components/uni-collapse/uni-collapse":1,"components/comment/comment":1,"components/uni-icons/uni-icons":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"components/ranking-list":"components/ranking-list","components/song-list":"components/song-list","components/scroll-playlist":"components/scroll-playlist","components/mehaotian-search-revision/mehaotian-search-revision":"components/mehaotian-search-revision/mehaotian-search-revision","components/uni-collapse-item/uni-collapse-item":"components/uni-collapse-item/uni-collapse-item","components/uni-collapse/uni-collapse":"components/uni-collapse/uni-collapse","components/uni-icons/uni-icons":"components/uni-icons/uni-icons"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/ranking-list/ranking-list":"components/ranking-list/ranking-list","components/song-list/song-list":"components/song-list/song-list","components/scroll-playlist/scroll-playlist":"components/scroll-playlist/scroll-playlist","components/mehaotian-search-revision/mehaotian-search-revision":"components/mehaotian-search-revision/mehaotian-search-revision","components/uni-collapse-item/uni-collapse-item":"components/uni-collapse-item/uni-collapse-item","components/uni-collapse/uni-collapse":"components/uni-collapse/uni-collapse","components/comment/comment":"components/comment/comment","components/uni-icons/uni-icons":"components/uni-icons/uni-icons"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {

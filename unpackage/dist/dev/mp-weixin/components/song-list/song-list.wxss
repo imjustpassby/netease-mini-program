@@ -24,7 +24,7 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.container.data-v-17c70eb8 {
+.container.data-v-c1c9db82 {
   width: 95vw;
   min-height: 366px;
   display: -webkit-box;
@@ -39,10 +39,10 @@
   padding: 20rpx;
   overflow: hidden;
 }
-.container .title.data-v-17c70eb8 {
+.container .title.data-v-c1c9db82 {
     font-weight: bold;
 }
-.container .list.data-v-17c70eb8 {
+.container .list.data-v-c1c9db82 {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
@@ -51,7 +51,7 @@
     -webkit-flex-direction: column;
             flex-direction: column;
 }
-.container .list-item.data-v-17c70eb8 {
+.container .list-item.data-v-c1c9db82 {
       margin-top: 20rpx;
       display: -webkit-box;
       display: -webkit-flex;
@@ -61,7 +61,7 @@
       -webkit-flex-direction: row;
               flex-direction: row;
 }
-.container .list-item .song-album.data-v-17c70eb8 {
+.container .list-item .song-album.data-v-c1c9db82 {
         display: -webkit-box;
         display: -webkit-flex;
         display: flex;
@@ -72,20 +72,20 @@
         -webkit-justify-content: center;
                 justify-content: center;
 }
-.container .list-item .song-album image.data-v-17c70eb8 {
+.container .list-item .song-album image.data-v-c1c9db82 {
           width: 100rpx;
           height: 100rpx;
           border-radius: 10rpx;
 }
-.container .list-item .song-detail.data-v-17c70eb8 {
+.container .list-item .song-detail.data-v-c1c9db82 {
         padding: 10rpx 0 20rpx 20rpx;
         line-height: 1.3em;
         text-overflow: ellipsis;
 }
-.container .list-item .song-detail ._h2.data-v-17c70eb8 {
+.container .list-item .song-detail ._h2.data-v-c1c9db82 {
           font-size: 14px;
 }
-.container .list-item .song-detail ._p.data-v-17c70eb8 {
+.container .list-item .song-detail ._p.data-v-c1c9db82 {
           font-size: 12px;
           font-weight: 200;
           color: #999;
