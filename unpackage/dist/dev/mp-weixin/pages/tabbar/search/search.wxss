@@ -78,6 +78,7 @@ view.data-v-3bf50d44 {
           flex-shrink: 0;
   font-size: 28rpx;
   color: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(#ff9801), to(#ff570a));
   background: -webkit-linear-gradient(left, #ff9801, #ff570a);
   background: linear-gradient(to right, #ff9801, #ff570a);
   border-radius: 60rpx;
@@ -218,85 +219,85 @@ view.data-v-3bf50d44 {
   background-color: #f1f1f1;
 }
 .search-result .list-item.data-v-3bf50d44 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-            flex-direction: row;
-    height: 60px;
-    font-size: 14px;
-    overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  height: 60px;
+  font-size: 14px;
+  overflow: hidden;
 }
 .search-result .list-item-index.data-v-3bf50d44 {
-      width: 50px;
-      height: 50px;
-      line-height: 50px;
-      text-align: center;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
 }
 .search-result .list-item-detail.data-v-3bf50d44 {
-      height: 50px;
-      line-height: 25px;
-      max-width: 80%;
-      overflow: hidden;
+  height: 50px;
+  line-height: 25px;
+  max-width: 80%;
+  overflow: hidden;
 }
 .search-result .list-item-detail ._p.data-v-3bf50d44 {
-        white-space: nowrap;
-        text-overflow: ellipsis;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .search-result .load-more.data-v-3bf50d44 {
-    text-align: center;
-    color: #999;
-    margin-bottom: 20rpx;
-    font-size: 12px;
+  text-align: center;
+  color: #999;
+  margin-bottom: 20rpx;
+  font-size: 12px;
 }
 .search-result .playlist.data-v-3bf50d44 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-            flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
 }
 .search-result .playlist-item.data-v-3bf50d44 {
-      padding: 10rpx 20rpx;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: row;
-              flex-direction: row;
+  padding: 10rpx 20rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
 }
 .search-result .playlist-item .playlist-cover.data-v-3bf50d44 {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-align: start;
-        -webkit-align-items: flex-start;
-                align-items: flex-start;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-                justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
 }
 .search-result .playlist-item .playlist-cover image.data-v-3bf50d44 {
-          width: 100rpx;
-          height: 100rpx;
-          border-radius: 10rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
 }
 .search-result .playlist-item .playlist-detail.data-v-3bf50d44 {
-        padding: 10rpx 0 20rpx 20rpx;
-        line-height: 1.3em;
-        text-overflow: ellipsis;
+  padding: 10rpx 0 20rpx 20rpx;
+  line-height: 1.3em;
+  text-overflow: ellipsis;
 }
 .search-result .playlist-item .playlist-detail ._h2.data-v-3bf50d44 {
-          font-size: 14px;
+  font-size: 14px;
 }
 .search-result .playlist-item .playlist-detail ._p.data-v-3bf50d44 {
-          font-size: 12px;
-          font-weight: 200;
-          color: #999;
+  font-size: 12px;
+  font-weight: 200;
+  color: #999;
 }
 

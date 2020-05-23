@@ -4,8 +4,7 @@
 			<view class="detail">
 				<view class="cover">
 					<image :src="playList.picUrl" mode="aspectFill" lazy-load="true"></image>
-				</view>
-				<view class="info">
+				</view> <view class="info">
 					<p>{{playList.name}}</p>
 					<p>标签：<span v-for="t in playList.tags" :key="t">{{t}}</span></p>
 					<p>by：{{playList.creator.nickname}}</p>

@@ -10,7 +10,7 @@
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "Coisin4Music",
+    "navigationBarTitleText": "iPassByMusic",
     "navigationBarBackgroundColor": "#252525",
     "backgroundColor": "#252525"
   },
@@ -40,6 +40,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap97.json"
+  "usingComponents": {}
 }

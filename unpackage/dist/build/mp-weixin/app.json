@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/tabbar/home/home",
+    "pages/tabbar/playlist/playlist",
+    "pages/tabbar/search/search",
+    "pages/ranking/ranking",
+    "pages/playlistDetail/playlist-detail",
+    "pages/songDetail/song-detail"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "iPassByMusic",
+    "navigationBarBackgroundColor": "#252525",
+    "backgroundColor": "#252525"
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "backgroundColor": "#252525",
+    "color": "#ccc",
+    "selectedColor": "#c20c0c",
+    "list": [
+      {
+        "pagePath": "pages/tabbar/home/home",
+        "iconPath": "static/img/tabbar/home.png",
+        "selectedIconPath": "static/img/tabbar/homeactive.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/tabbar/playlist/playlist",
+        "iconPath": "static/img/tabbar/guanzhu.png",
+        "selectedIconPath": "static/img/tabbar/guanzhuactive.png",
+        "text": "歌单"
+      },
+      {
+        "pagePath": "pages/tabbar/search/search",
+        "iconPath": "static/img/tabbar/search.png",
+        "selectedIconPath": "static/img/tabbar/search_active.png",
+        "text": "搜索"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

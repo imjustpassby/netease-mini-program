@@ -1,7 +1,10 @@
+const localURL = 'http://localhost:3000'
+const onlineURL = 'https://ipassby.cloud/api'
+
 export function request(data){
   return new Promise(function(resolve, reject){
     uni.request({
-      url: 'http://localhost:3000' + data.url,
+			url: onlineURL + data.url,
       data: data.params || {},
       header: {
         'Content-Type': 'application/json'
@@ -12,7 +15,7 @@ export function request(data){
       },
       fail: function (error) {
         console.log("request failed")
-		reject(error);
+				reject(error);
       }
     })
   })

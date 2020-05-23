@@ -43,26 +43,26 @@
   white-space: nowrap;
 }
 .ranking-title.data-v-0c2b67b1 {
-    font-size: 14px;
+  font-size: 14px;
 }
 .ranking ._li.data-v-0c2b67b1 {
-    font-size: 12px;
-    max-width: 60%;
-    line-height: 2em;
-    letter-spacing: 1px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  font-size: 12px;
+  max-width: 60%;
+  line-height: 2em;
+  letter-spacing: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .ranking ._li ._span.data-v-0c2b67b1 {
-      padding-left: 8rpx;
-      color: #999;
+  padding-left: 8rpx;
+  color: #999;
 }
 .ranking image.data-v-0c2b67b1 {
-    width: 123px;
-    height: 123px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-radius: 0 5px 5px 0;
+  width: 123px;
+  height: 123px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 5px 5px 0;
 }
 

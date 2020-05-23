@@ -167,12 +167,12 @@
 		align-items: center;
 		width: 100%;
 		height: 100%;
-		background-color: rgba($color: #000000, $alpha: 0.9);
+		padding-top: 20rpx;
+		background-color: rgba($color: #000000, $alpha: 0.8);
 		color: #fafafa;
 
 		h1 {
 			text-align: center;
-			color: $uni-text-color-grey;
 		}
 
 		.cover {

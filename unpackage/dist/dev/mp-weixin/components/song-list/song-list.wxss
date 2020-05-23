@@ -40,54 +40,54 @@
   overflow: hidden;
 }
 .container .title.data-v-c1c9db82 {
-    font-weight: bold;
+  font-weight: bold;
 }
 .container .list.data-v-c1c9db82 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-            flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
 }
 .container .list-item.data-v-c1c9db82 {
-      margin-top: 20rpx;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: row;
-              flex-direction: row;
+  margin-top: 20rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
 }
 .container .list-item .song-album.data-v-c1c9db82 {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-align: start;
-        -webkit-align-items: flex-start;
-                align-items: flex-start;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-                justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
 }
 .container .list-item .song-album image.data-v-c1c9db82 {
-          width: 100rpx;
-          height: 100rpx;
-          border-radius: 10rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
 }
 .container .list-item .song-detail.data-v-c1c9db82 {
-        padding: 10rpx 0 20rpx 20rpx;
-        line-height: 1.3em;
-        text-overflow: ellipsis;
+  padding: 10rpx 0 20rpx 20rpx;
+  line-height: 1.3em;
+  text-overflow: ellipsis;
 }
 .container .list-item .song-detail ._h2.data-v-c1c9db82 {
-          font-size: 14px;
+  font-size: 14px;
 }
 .container .list-item .song-detail ._p.data-v-c1c9db82 {
-          font-size: 12px;
-          font-weight: 200;
-          color: #999;
+  font-size: 12px;
+  font-weight: 200;
+  color: #999;
 }
 

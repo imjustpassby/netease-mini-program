@@ -47,6 +47,7 @@
 	.container {
 		position: relative;
 		width: 100%;
+		min-height: 150px;
 		padding: 10px 10px;
 	}
 

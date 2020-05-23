@@ -45,27 +45,27 @@
           align-items: center;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  padding-top: 20rpx;
+  background-color: rgba(0, 0, 0, 0.8);
   color: #fafafa;
 }
 .detail ._h1.data-v-3ad8abf4 {
-    text-align: center;
-    color: #999;
+  text-align: center;
 }
 .detail .cover.data-v-3ad8abf4 {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 .detail .cover image.data-v-3ad8abf4 {
-      width: 200px;
-      height: 200px;
-      border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
 }
 .detail .lyric.data-v-3ad8abf4 {
-    height: 150px;
-    margin: 0 aoto;
-    overflow: scroll;
-    text-align: center;
-    color: #999;
+  height: 150px;
+  margin: 0 aoto;
+  overflow: scroll;
+  text-align: center;
+  color: #999;
 }
 .simi.data-v-3ad8abf4 {
   width: 95vw;
@@ -83,54 +83,54 @@
   overflow: hidden;
 }
 .simi .title.data-v-3ad8abf4 {
-    font-weight: bold;
+  font-weight: bold;
 }
 .simi .list.data-v-3ad8abf4 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-            flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
 }
 .simi .list-item.data-v-3ad8abf4 {
-      margin-top: 20rpx;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: row;
-              flex-direction: row;
+  margin-top: 20rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
 }
 .simi .list-item .song-album.data-v-3ad8abf4 {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-align: start;
-        -webkit-align-items: flex-start;
-                align-items: flex-start;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-                justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
 }
 .simi .list-item .song-album image.data-v-3ad8abf4 {
-          width: 100rpx;
-          height: 100rpx;
-          border-radius: 10rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
 }
 .simi .list-item .song-detail.data-v-3ad8abf4 {
-        padding: 10rpx 0 20rpx 20rpx;
-        line-height: 1.3em;
-        text-overflow: ellipsis;
+  padding: 10rpx 0 20rpx 20rpx;
+  line-height: 1.3em;
+  text-overflow: ellipsis;
 }
 .simi .list-item .song-detail ._h2.data-v-3ad8abf4 {
-          font-size: 14px;
+  font-size: 14px;
 }
 .simi .list-item .song-detail ._p.data-v-3ad8abf4 {
-          font-size: 12px;
-          font-weight: 200;
-          color: #999;
+  font-size: 12px;
+  font-weight: 200;
+  color: #999;
 }
 

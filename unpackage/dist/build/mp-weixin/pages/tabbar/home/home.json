@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "song-list": "/components/song-list/song-list",
+    "scroll-playlist": "/components/scroll-playlist/scroll-playlist",
+    "ranking-list": "/components/ranking-list/ranking-list"
+  }
+}
