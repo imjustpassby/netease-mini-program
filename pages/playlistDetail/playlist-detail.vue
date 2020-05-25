@@ -4,7 +4,8 @@
 			<view class="detail">
 				<view class="cover">
 					<image :src="playList.picUrl" mode="aspectFill" lazy-load="true"></image>
-				</view> <view class="info">
+				</view>
+				<view class="info">
 					<p>{{playList.name}}</p>
 					<p>标签：<span v-for="t in playList.tags" :key="t">{{t}}</span></p>
 					<p>by：{{playList.creator.nickname}}</p>
@@ -36,7 +37,8 @@
 		getPlaylistDetail
 	} from "@/api/playList.js"
 	import {
-		getSongUrl
+		getSongUrl,
+		getSongDetail
 	} from "@/api/song.js"
 	import {
 		mapMutations
@@ -74,7 +76,12 @@
 					"{y}-{m}-{d}"
 				);
 				this.playList.trackIds = res.playlist.trackIds;
-				this.playList.tracks = res.playlist.tracks.map(item => {
+				let ids = res.playlist.trackIds.map(item => {
+					return item.id;
+				});
+				let res1 = await getSongDetail(ids.join(","));
+				this.playList.tracks = res1.songs;
+				this.playList.tracks = this.playList.tracks.map(item => {
 					let artist = [];
 					let artistId = item.ar.map(a => {
 						return a.id;

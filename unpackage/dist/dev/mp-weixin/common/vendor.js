@@ -11255,7 +11255,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.formatTime
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/tabbar/home/home": { "usingComponents": { "song-list": "/components/song-list/song-list", "scroll-playlist": "/components/scroll-playlist/scroll-playlist", "ranking-list": "/components/ranking-list/ranking-list" }, "usingAutoImportComponents": { "song-list": "/components/song-list/song-list", "scroll-playlist": "/components/scroll-playlist/scroll-playlist", "ranking-list": "/components/ranking-list/ranking-list" } }, "pages/tabbar/playlist/playlist": { "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/tabbar/search/search": { "usingComponents": { "m-search": "/components/mehaotian-search-revision/mehaotian-search-revision" }, "usingAutoImportComponents": { "uni-collapse": "/components/uni-collapse/uni-collapse", "uni-collapse-item": "/components/uni-collapse-item/uni-collapse-item" } }, "pages/ranking/ranking": { "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/playlistDetail/playlist-detail": { "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/songDetail/song-detail": { "usingComponents": { "song-list": "/components/song-list/song-list", "comment": "/components/comment/comment" }, "usingAutoImportComponents": { "comment": "/components/comment/comment" } } }, "globalStyle": { "navigationBarTextStyle": "white", "navigationBarTitleText": "iPassByMusic", "navigationBarBackgroundColor": "#252525", "backgroundColor": "#252525" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/tabbar/home/home": {}, "pages/tabbar/playlist/playlist": {}, "pages/tabbar/search/search": {}, "pages/ranking/ranking": {}, "pages/playlistDetail/playlist-detail": {}, "pages/songDetail/song-detail": {} }, "globalStyle": { "navigationBarTextStyle": "white", "navigationBarTitleText": "iPassByMusic", "navigationBarBackgroundColor": "#252525", "backgroundColor": "#252525" } };exports.default = _default;
 
 /***/ }),
 
@@ -11302,7 +11302,7 @@ function getCommentMv(data) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "appid": "" };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "appid": "__UNI__D18709C" };exports.default = _default;
 
 /***/ })
 

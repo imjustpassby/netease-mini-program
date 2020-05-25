@@ -161,6 +161,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var _utils = __webpack_require__(/*! @/util/utils.js */ 69);
 
 
@@ -168,6 +169,7 @@ var _playList = __webpack_require__(/*! @/api/playList.js */ 37);
 
 
 var _song = __webpack_require__(/*! @/api/song.js */ 52);
+
 
 
 var _vuex = __webpack_require__(/*! vuex */ 16);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _createForOfIteratorHelper(o) {if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) {if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) {var i = 0;var F = function F() {};return { s: F, n: function n() {if (i >= o.length) return { done: true };return { done: false, value: o[i++] };}, e: function e(_e) {throw _e;}, f: F };}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}var it,normalCompletion = true,didErr = false,err;return { s: function s() {it = o[Symbol.iterator]();}, n: function n() {var step = it.next();normalCompletion = step.done;return step;}, e: function e(_e2) {didErr = true;err = _e2;}, f: function f() {try {if (!normalCompletion && it.return != null) it.return();} finally {if (didErr) throw err;}} };}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(n);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var _default =
@@ -196,7 +198,7 @@ var _vuex = __webpack_require__(/*! vuex */ 16);function _interopRequireDefault(
   },
   methods: _objectSpread({},
   (0, _vuex.mapMutations)(['setPlayingSong']), {
-    getListDetail: function getListDetail(data) {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
+    getListDetail: function getListDetail(data) {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var res, ids, res1;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
 
                   (0, _playList.getPlaylistDetail)(data));case 2:res = _context2.sent;
                 _this2.playList.id = res.playlist.id;
@@ -206,7 +208,12 @@ var _vuex = __webpack_require__(/*! vuex */ 16);function _interopRequireDefault(
                 "{y}-{m}-{d}");
 
                 _this2.playList.trackIds = res.playlist.trackIds;
-                _this2.playList.tracks = res.playlist.tracks.map(function (item) {
+                ids = res.playlist.trackIds.map(function (item) {
+                  return item.id;
+                });_context2.next = 10;return (
+                  (0, _song.getSongDetail)(ids.join(",")));case 10:res1 = _context2.sent;
+                _this2.playList.tracks = res1.songs;
+                _this2.playList.tracks = _this2.playList.tracks.map(function (item) {
                   var artist = [];
                   var artistId = item.ar.map(function (a) {
                     return a.id;
@@ -230,7 +237,7 @@ var _vuex = __webpack_require__(/*! vuex */ 16);function _interopRequireDefault(
                 _this2.playList.tags = res.playlist.tags;
                 _this2.playList.picUrl = res.playlist.coverImgUrl;
                 _this2.playList.name = res.playlist.name;
-                _this2.playList.description = res.playlist.description;case 12:case "end":return _context2.stop();}}}, _callee2);}))();
+                _this2.playList.description = res.playlist.description;case 17:case "end":return _context2.stop();}}}, _callee2);}))();
     },
     playSong: function playSong(song) {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var routes, curRoute;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:
                 routes = getCurrentPages(); // 获取当前打开过的页面路由数组
